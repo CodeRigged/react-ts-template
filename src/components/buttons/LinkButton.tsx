@@ -2,8 +2,8 @@ import { Button, ButtonProps } from "@mui/material"
 import { Link, To } from "react-router-dom"
 
 type LinkButton = {
-  linkTo: To
   label: string
+  to: To
 }
 /**
  * Renders a LinkButton component with the provided label, linkTo, and additional button properties.
@@ -13,9 +13,9 @@ type LinkButton = {
  * @param {ButtonProps} buttonProps - Additional properties  from the button component.
  * @return {JSX.Element} The rendered LinkButton component.
  */
-const LinkButton = ({ label, linkTo, ...buttonProps }: LinkButton & ButtonProps) => {
+const LinkButton = ({ label, to, ...buttonProps }: LinkButton & ButtonProps) => {
   return (
-    <Button component={Link} to={linkTo} {...buttonProps}>
+    <Button component={Link} to={to} {...buttonProps}>
       {label}
     </Button>
   )

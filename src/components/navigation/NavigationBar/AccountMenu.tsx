@@ -1,6 +1,7 @@
 import { AccountCircle, Logout, Settings } from "@mui/icons-material"
-import { Avatar, IconButton, ListItemIcon } from "@mui/material"
-import AppMenu from "../AppMenu"
+import { Avatar, Divider, IconButton } from "@mui/material"
+import AppMenu from "../Menu"
+import { MenuListItem } from "../Menu/MenuItems"
 
 const AccountMenu = () => {
   return (
@@ -10,38 +11,11 @@ const AccountMenu = () => {
           <Avatar />
         </IconButton>
       )}
-      divideAt={[0]}
       items={[
-        {
-          element: (
-            <>
-              <ListItemIcon>
-                <AccountCircle />
-              </ListItemIcon>
-              Profile
-            </>
-          ),
-        },
-        {
-          element: (
-            <>
-              <ListItemIcon>
-                <Settings fontSize="small" />
-              </ListItemIcon>
-              Settings
-            </>
-          ),
-        },
-        {
-          element: (
-            <>
-              <ListItemIcon>
-                <Logout fontSize="small" />
-              </ListItemIcon>
-              Logout
-            </>
-          ),
-        },
+        <MenuListItem icon={<AccountCircle />} text="Profile" />,
+        <Divider />,
+        <MenuListItem icon={<Settings fontSize="small" />} text="Settings" dense />,
+        <MenuListItem icon={<Logout fontSize="small" />} text="Logout" dense />,
       ]}
     />
   )
