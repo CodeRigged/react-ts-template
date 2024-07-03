@@ -9,6 +9,14 @@ type ItemProps = {
   to?: To
 }
 
+/**
+ * Renders a menu list item with an icon, text, and link.
+ *
+ * @param {ItemProps} icon - The icon to display.
+ * @param {ItemProps} text - The text to display.
+ * @param {ItemProps} to - The link destination.
+ * @return {ReactElement<typeof MenuItem>} The rendered menu list item.
+ */
 export const MenuListItem = ({
   icon,
   text,

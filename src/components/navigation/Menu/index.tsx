@@ -8,6 +8,12 @@ type AppMenu = {
   items: ReactElement<typeof MenuListItem | typeof Divider>[]
 }
 
+/**
+ * Renders the AppMenu component with the specified Activator and items.
+ *
+ * @param {ComponentType<IconButtonProps | ButtonProps>} Activator - The component that triggers the menu opening.
+ * @param {ReactElement<typeof MenuListItem | typeof Divider>[]} items - The list of menu items to display.
+ */
 const AppMenu = ({ Activator, items }: AppMenu) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const isOpen = Boolean(anchorEl)
