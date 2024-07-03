@@ -1,21 +1,10 @@
-import { ThemeProvider, createTheme } from "@mui/material"
-import { useMemo } from "react"
+import { ThemeProvider } from "@mui/material"
 import { RouterProvider } from "react-router-dom"
 import router from "./plugins/router"
-import { useThemeStore } from "./stores"
+import { useAppTheme } from "./theme"
 
 function App() {
-  const { mode } = useThemeStore()
-
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  )
+  const theme = useAppTheme()
   return (
     <ThemeProvider theme={theme}>
       <RouterProvider router={router} />

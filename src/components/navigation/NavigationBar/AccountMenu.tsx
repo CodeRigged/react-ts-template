@@ -1,5 +1,5 @@
 import { AccountCircle, Logout, Settings } from "@mui/icons-material"
-import { Avatar, Divider, IconButton } from "@mui/material"
+import { Divider, IconButton } from "@mui/material"
 import AppMenu from "../Menu"
 import { MenuListItem } from "../Menu/MenuItems"
 
@@ -14,8 +14,8 @@ const AccountMenu = () => {
   return (
     <AppMenu
       Activator={({ onClick }) => (
-        <IconButton onClick={onClick} size="small" sx={{ ml: 2 }} aria-haspopup="true">
-          <Avatar color="primary" />
+        <IconButton onClick={onClick} sx={{ ml: 2 }} aria-haspopup="true">
+          <AccountCircle />
         </IconButton>
       )}
       items={[
