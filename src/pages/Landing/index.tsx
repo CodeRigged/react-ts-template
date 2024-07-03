@@ -1,5 +1,4 @@
-type Props = {}
-const LandingPage = (props: Props) => {
+const LandingPage = () => {
   return <div>Landing Page</div>
 }
 export default LandingPage

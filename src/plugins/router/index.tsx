@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom"
 import AppLayout from "~/layouts/AppLayout"
-import LandingPage from "~/pages/LandingPage"
+import LandingPage from "~/pages/Landing"
+import ProfilePage from "~/pages/Profile"
+import SettingsPage from "~/pages/Settings"
 
 const router = createBrowserRouter([
   {
@@ -10,6 +12,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <LandingPage />,
+      },
+      {
+        path: "/profile",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/settings",
+        element: <SettingsPage />,
       },
     ],
   },
