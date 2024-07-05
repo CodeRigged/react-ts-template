@@ -1,4 +1,6 @@
+import PageLayout from "~/layouts/PageLayout"
+
 const ProfilePage = () => {
-  return <div>Profile Page</div>
+  return <PageLayout documentTitle="Profile">TODO</PageLayout>
 }
 export default ProfilePage

@@ -1,4 +1,6 @@
+import PageLayout from "~/layouts/PageLayout"
+
 const LandingPage = () => {
-  return <div>Landing Page</div>
+  return <PageLayout documentTitle="Home">TODO</PageLayout>
 }
 export default LandingPage
