@@ -11,7 +11,7 @@ import { useThemeStore } from "~/stores/index"
 const ThemeSwitch = () => {
   const theme = useTheme()
   const { toggleMode } = useThemeStore()
-  return <IconButton onClick={toggleMode}>{theme.palette.mode === "light" ? <LightMode /> : <DarkMode />}</IconButton>
+  return <IconButton onClick={toggleMode}>{theme.palette.mode === "light" ? <DarkMode /> : <LightMode />}</IconButton>
 }
 
 export default ThemeSwitch

@@ -1,12 +1,9 @@
 import { AppBar, Grid, useTheme } from "@mui/material"
-import { ReactNode } from "react"
+import { ChildComponent } from "~/types/common"
 import AccountMenu from "./AccountMenu"
 import AppLogo from "./AppLogo"
 import ThemeSwitch from "./ThemeSwitch"
 
-type NavigationBarProps = {
-  children?: ReactNode
-}
 /**
  * Renders a navigation bar with an app logo, children components, and account and theme switches.
  *
@@ -14,7 +11,7 @@ type NavigationBarProps = {
  * @param {ReactNode} props.children - The child components to be rendered.
  * @return {JSX.Element} The rendered navigation bar.
  */
-const NavigationBar = ({ children }: NavigationBarProps) => {
+const NavigationBar = ({ children }: ChildComponent) => {
   const theme = useTheme()
   return (
     <AppBar position="static" color={theme.palette.mode === "light" ? "transparent" : "default"}>
