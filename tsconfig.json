@@ -29,6 +29,7 @@
       "~/layouts/*": ["./layouts/*"],
       "~/pages/*": ["./pages/*"],
       "~/stores/*": ["./stores/*"],
+      "~/types/*": ["./types/*"],
       "~/utils/*": ["./utils/*"]
     }
   },
