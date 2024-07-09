@@ -1,4 +1,4 @@
-import LinkButton from "~/components/buttons/LinkButton"
+import LinkButton from "~/components/inputs/buttons/LinkButton"
 
 /**
  * A function that renders the AppLogo component.
