@@ -1,0 +1,26 @@
+{
+  "languages": {
+    "en-US": "English",
+    "de-DE": "German",
+    "fr-FR": "French"
+  },
+  "pages": {
+    "landing": { "title": "Home page" },
+    "profile": { "title": "Profile" },
+    "settings": {
+      "title": "Settings",
+      "tabs": {
+        "general": {
+          "title": "General",
+          "sections": {
+            "localeAndTime": "Language & Time"
+          }
+        },
+        "advanced": {
+          "title": "Advanced"
+        }
+      }
+    },
+    "logout": { "title": "Logout" }
+  }
+}

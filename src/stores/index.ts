@@ -1,7 +1,7 @@
 import { PaletteMode } from "@mui/material"
 import { create } from "zustand"
 import { persist } from "zustand/middleware"
-import { Languages } from "~/types/enums"
+import { Locales } from "~/types/enums"
 
 interface ThemeStore {
   mode: PaletteMode
@@ -17,16 +17,16 @@ export const useThemeStore = create(
   )
 )
 
-interface LanguageStore {
-  selectedLanguage: Languages
-  updateLanguage: (language: Languages) => void
+interface LocaleStore {
+  selectedLocale: Locales
+  updateLocale: (locale: Locales) => void
 }
-export const useLanguageStore = create(
-  persist<LanguageStore>(
+export const useLocaleStore = create(
+  persist<LocaleStore>(
     set => ({
-      selectedLanguage: Languages.ENGLISH,
-      updateLanguage: language => set({ selectedLanguage: language }),
+      selectedLocale: Locales.ENGLISH,
+      updateLocale: locale => set({ selectedLocale: locale }),
     }),
-    { name: "language" }
+    { name: "locale" }
   )
 )

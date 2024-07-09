@@ -1,27 +1,31 @@
 import { Divider, Typography } from "@mui/material"
+import { FormattedMessage, useIntl } from "react-intl"
 import SelectBox, { SelectBoxOption } from "~/components/inputs/select/SelectBox"
 import SettingsSection from "~/components/pages/Settings/SettingsSection"
-import { useLanguageStore } from "~/stores/index"
-import { Languages } from "~/types/enums"
+import { useLocaleStore } from "~/stores/index"
+import { Locales } from "~/types/enums"
 
 const GeneralTab = () => {
-  const { selectedLanguage, updateLanguage } = useLanguageStore()
-  const languageOptions: SelectBoxOption<Languages>[] = [
-    { label: "English", value: Languages.ENGLISH },
-    { label: "French", value: Languages.FRENCH },
-    { label: "German", value: Languages.GERMAN },
+  const { formatMessage } = useIntl()
+  const { selectedLocale, updateLocale } = useLocaleStore()
+  const localeOptions: SelectBoxOption<Locales>[] = [
+    { label: formatMessage({ id: "languages.en-US" }), value: Locales.ENGLISH },
+    { label: formatMessage({ id: "languages.fr-FR" }), value: Locales.FRENCH },
+    { label: formatMessage({ id: "languages.de-DE" }), value: Locales.GERMAN },
   ]
   return (
     <div>
-      <Typography variant="h6">Language & Time</Typography>
+      <Typography variant="h6">
+        <FormattedMessage id="pages.settings.tabs.general.title" />
+      </Typography>
       <Divider />
       <SettingsSection
         components={[
           <SelectBox
-            label="Language"
-            selected={selectedLanguage}
-            options={languageOptions}
-            onChange={(_event, selectedOption) => updateLanguage(selectedOption?.value as Languages)}
+            label={formatMessage({ id: "pages.settings.tabs.general.sections.localeAndTime" })}
+            selected={selectedLocale}
+            options={localeOptions}
+            onChange={(_event, selectedOption) => updateLocale(selectedOption?.value as Locales)}
           />,
         ]}
       />

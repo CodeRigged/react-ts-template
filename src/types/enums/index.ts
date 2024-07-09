@@ -1,5 +1,6 @@
-export enum Languages {
-  ENGLISH = "en",
-  FRENCH = "fr",
-  GERMAN = "de",
+export enum Locales {
+  ENGLISH = "en-US",
+  FRENCH = "fr-FR",
+  GERMAN = "de-DE",
+  // add more locales here
 }
