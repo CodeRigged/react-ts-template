@@ -1,4 +1,4 @@
 const AdvancedTab = () => {
-  return <div>AdvancedTab</div>
+  return <div>Advanced Settings</div>
 }
 export default AdvancedTab
