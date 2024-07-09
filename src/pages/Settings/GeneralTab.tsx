@@ -1,11 +1,11 @@
 import { Divider, Typography } from "@mui/material"
-import { useState } from "react"
 import SelectBox, { SelectBoxOption } from "~/components/inputs/select/SelectBox"
 import SettingsSection from "~/components/pages/Settings/SettingsSection"
+import { useLanguageStore } from "~/stores/index"
 import { Languages } from "~/types/enums"
 
 const GeneralTab = () => {
-  const [selected, setSelected] = useState<Languages>(Languages.ENGLISH)
+  const { selectedLanguage, updateLanguage } = useLanguageStore()
   const languageOptions: SelectBoxOption<Languages>[] = [
     { label: "English", value: Languages.ENGLISH },
     { label: "French", value: Languages.FRENCH },
@@ -19,9 +19,9 @@ const GeneralTab = () => {
         components={[
           <SelectBox
             label="Language"
-            selected={selected}
+            selected={selectedLanguage}
             options={languageOptions}
-            onChange={(_event, selectedOption) => setSelected(selectedOption?.value as Languages)}
+            onChange={(_event, selectedOption) => updateLanguage(selectedOption?.value as Languages)}
           />,
         ]}
       />
