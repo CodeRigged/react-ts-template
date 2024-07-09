@@ -22,7 +22,7 @@ const GeneralTab = () => {
       <SettingsSection
         components={[
           <SelectBox
-            label={formatMessage({ id: "pages.settings.tabs.general.sections.localeAndTime" })}
+            label={formatMessage({ id: "pages.settings.tabs.general.sections.locale" })}
             selected={selectedLocale}
             options={localeOptions}
             onChange={(_event, selectedOption) => updateLocale(selectedOption?.value as Locales)}

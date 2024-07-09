@@ -13,7 +13,7 @@
         "general": {
           "title": "General",
           "sections": {
-            "localeAndTime": "Language & Time"
+            "locale": "Language"
           }
         },
         "advanced": {
