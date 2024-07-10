@@ -1,26 +1,35 @@
 {
+  "common": {
+    "update": "{what} is being updated"
+  },
   "languages": {
-    "en-US": "English",
     "de-DE": "German",
+    "en-US": "English",
     "fr-FR": "French"
   },
   "pages": {
-    "landing": { "title": "Home page" },
-    "profile": { "title": "Profile" },
+    "landing": {
+      "title": "Home page"
+    },
+    "logout": {
+      "title": "Logout"
+    },
+    "profile": {
+      "title": "Profile"
+    },
     "settings": {
-      "title": "Settings",
       "tabs": {
-        "general": {
-          "title": "General",
-          "sections": {
-            "locale": "Language"
-          }
-        },
         "advanced": {
           "title": "Advanced"
+        },
+        "general": {
+          "sections": {
+            "locale": "Language"
+          },
+          "title": "General"
         }
-      }
-    },
-    "logout": { "title": "Logout" }
+      },
+      "title": "Settings"
+    }
   }
 }

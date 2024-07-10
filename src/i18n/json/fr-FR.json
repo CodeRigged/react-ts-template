@@ -1,26 +1,35 @@
 {
+  "common": {
+    "update": "{what} se met à jour"
+  },
   "languages": {
-    "en-US": "Anglais",
     "de-DE": "Allemand",
+    "en-US": "Anglais",
     "fr-FR": "Français"
   },
   "pages": {
-    "landing": { "title": "Accueil" },
-    "profile": { "title": "Profil" },
+    "landing": {
+      "title": "Accueil"
+    },
+    "logout": {
+      "title": "Se déconnecter"
+    },
+    "profile": {
+      "title": "Profil"
+    },
     "settings": {
-      "title": "Paramètres",
       "tabs": {
-        "general": {
-          "title": "Général",
-          "sections": {
-            "locale": "Langue"
-          }
-        },
         "advanced": {
           "title": "Avancée"
+        },
+        "general": {
+          "sections": {
+            "locale": "Langue"
+          },
+          "title": "Général"
         }
-      }
-    },
-    "logout": { "title": "Se déconnecter" }
+      },
+      "title": "Paramètres"
+    }
   }
 }
