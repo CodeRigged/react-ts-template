@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useLocaleStore } from "~/stores/index"
+import { useAppStore, useLocaleStore } from "~/stores/index"
 import { flattenObject } from "../utils"
 import defaultLocale from "./json/en-US.json"
 
@@ -16,13 +16,17 @@ const LocalesData = {
  */
 export const useLocaleLoader = () => {
   const { selectedLocale } = useLocaleStore()
+  const { setIsPending, setError } = useAppStore()
   const [messages, setMessages] = useState(flattenObject(defaultLocale))
 
   useEffect(() => {
+    setIsPending(true)
     LocalesData[selectedLocale]()
       .then(data => setMessages(flattenObject(data.default)))
-      .catch(error => console.error(error))
-      .finally(() => {})
-  }, [selectedLocale])
+      .catch(error => setError(error))
+      .finally(() => {
+        setIsPending(false)
+      })
+  }, [selectedLocale, setIsPending, setError])
   return { messages, selectedLocale }
 }
