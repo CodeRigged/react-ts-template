@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom"
+import ErrorAlert from "~/components/feedback/alerts/ErrorAlert"
 import LoadingOverlay from "~/components/feedback/LoadingOverlay"
 import NavigationBar from "~/components/navigation/NavigationBar"
 
@@ -13,6 +14,7 @@ const AppLayout = () => (
   <>
     <LoadingOverlay />
     <NavigationBar />
+    <ErrorAlert />
     <Outlet />
   </>
 )

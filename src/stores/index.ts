@@ -2,18 +2,19 @@ import { PaletteMode } from "@mui/material"
 import { create } from "zustand"
 import { persist } from "zustand/middleware"
 import { Locales } from "~/types/enums"
-import { createErrorSlice, createPendingSlice, ErrorState, PendingState } from "./state-handlers"
+import { createPendingSlice, PendingState } from "./state-handlers"
 
-interface AppStore extends PendingState, ErrorState {}
+interface AppStore extends PendingState {}
 
 export const useAppStore = create<AppStore>((...a) => ({
   ...createPendingSlice(...a),
-  ...createErrorSlice(...a),
 }))
+
 interface ThemeStore {
   mode: PaletteMode
   toggleMode: () => void
 }
+
 export const useThemeStore = create(
   persist<ThemeStore>(
     set => ({
@@ -28,6 +29,7 @@ interface LocaleStore {
   selectedLocale: Locales
   updateLocale: (locale: Locales) => void
 }
+
 export const useLocaleStore = create(
   persist<LocaleStore>(
     set => ({

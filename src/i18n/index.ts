@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useAppStore, useLocaleStore } from "~/stores/index"
+import { useErrorStore } from "~/stores/state-handlers"
 import { flattenObject } from "../utils"
 import defaultLocale from "./json/en-US.json"
 
@@ -16,7 +17,8 @@ const LocalesData = {
  */
 export const useLocaleLoader = () => {
   const { selectedLocale } = useLocaleStore()
-  const { setIsPending, setError } = useAppStore()
+  const { setIsPending } = useAppStore()
+  const { setError } = useErrorStore()
   const [messages, setMessages] = useState(flattenObject(defaultLocale))
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export const useLocaleLoader = () => {
       .finally(() => {
         setIsPending(false)
       })
-  }, [selectedLocale, setIsPending, setError])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedLocale])
   return { messages, selectedLocale }
 }

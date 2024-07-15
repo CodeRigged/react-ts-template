@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material"
+import createTheme from "@mui/material/styles/createTheme"
 import { useMemo } from "react"
 import { useThemeStore } from "../stores"
 
@@ -10,13 +10,6 @@ export const useAppTheme = () => {
       createTheme({
         palette: {
           mode,
-        },
-        components: {
-          MuiSvgIcon: {
-            defaultProps: {
-              color: "primary",
-            },
-          },
         },
       }),
     [mode]
