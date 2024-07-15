@@ -5,6 +5,8 @@ import { useErrorStore } from "~/stores/state-handlers"
 /**
  * Renders the AppAlert component displaying error messages in a Snackbar.
  *
+ * NOTE: might want to use  [notistack](https://github.com/iamhosseindhv/notistack) for more flexibility.
+ *
  * @return {JSX.Element} The rendered AppAlert component.
  */
 const AppAlert = () => {
