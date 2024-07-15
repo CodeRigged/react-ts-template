@@ -16,7 +16,7 @@ const GeneralTab = () => {
   return (
     <div>
       <Typography variant="h6">
-        <FormattedMessage id="pages.settings.tabs.general.title" />
+        <FormattedMessage id="pages.settings.tabs.general.sections.locale" />
       </Typography>
       <Divider />
       <SettingsSection
