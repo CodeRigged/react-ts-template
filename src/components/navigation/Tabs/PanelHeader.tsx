@@ -8,6 +8,15 @@ interface PanelHeaderProps {
   tabs: TabType[]
 }
 
+/**
+ * Renders the header panel for a tabbed interface.
+ *
+ * @param {PanelHeaderProps} props - The props object containing the selected tab, a function to set the selected tab, and an array of tabs.
+ * @param {Selected} props.selected - The currently selected tab.
+ * @param {Dispatch<SetStateAction<Selected>>} props.setSelected - A function to set the selected tab.
+ * @param {TabType[]} props.tabs - An array of tabs to render in the header panel.
+ * @return {JSX.Element} The rendered header panel.
+ */
 const PanelHeader = ({ selected, setSelected, tabs }: PanelHeaderProps) => {
   const handleChange = (_e: SyntheticEvent, newValue: Selected) => {
     setSelected(newValue)

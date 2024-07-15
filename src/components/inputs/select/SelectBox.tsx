@@ -14,6 +14,15 @@ interface SelectBoxProps {
   selected: unknown
 }
 
+/**
+ * Renders a select box component with customizable options and selected value.
+ *
+ * @param {string} label - The label for the select box.
+ * @param {Array<SelectBoxOption<unknown>>} options - An array of options for the select box.
+ * @param {unknown} selected - The currently selected value.
+ * @param {(event: SyntheticEvent, selectedOption: SelectBoxOption<unknown> | null) => void} onChange - The callback function to handle value change.
+ * @return {ReactElement} The rendered select box component.
+ */
 const SelectBox = ({ label, options, selected, onChange }: SelectBoxProps) => {
   const selectedOption = options.find(option => option.value === selected)
   const containsHints = options.some(option => option.hint)

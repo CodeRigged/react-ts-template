@@ -14,6 +14,13 @@ interface TabsProps {
   tabs: TabType[]
 }
 
+/**
+ * Renders a set of tabs with associated content.
+ *
+ * @param {TabsProps} props - The props object containing the tabs to render.
+ * @param {TabType[]} props.tabs - An array of TabType objects representing the tabs to render.
+ * @return {JSX.Element} The rendered Tabs component.
+ */
 const Tabs = ({ tabs }: TabsProps) => {
   const [selected, setSelected] = useState<Selected>(0)
 

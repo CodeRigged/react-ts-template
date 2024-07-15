@@ -1,6 +1,11 @@
 import { Backdrop, CircularProgress, Grid, Typography } from "@mui/material"
 import { useAppStore } from "~/stores/index"
 
+/**
+ * Renders a loading overlay component.
+ *
+ * @return {JSX.Element} The loading overlay component
+ */
 const LoadingOverlay = () => {
   const { isPending, text } = useAppStore()
 
