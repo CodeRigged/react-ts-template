@@ -4,6 +4,7 @@ import { persist } from "zustand/middleware"
 import { Locales } from "~/types/enums"
 import { createPendingSlice, PendingState } from "./state-handlers"
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface AppStore extends PendingState {}
 
 export const useAppStore = create<AppStore>((...a) => ({

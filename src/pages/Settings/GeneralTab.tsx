@@ -8,11 +8,13 @@ import { Locales } from "~/types/enums"
 const GeneralTab = () => {
   const { formatMessage } = useIntl()
   const { selectedLocale, updateLocale } = useLocaleStore()
+
   const localeOptions: SelectBoxOption<Locales>[] = [
     { label: formatMessage({ id: "languages.en-US" }), value: Locales.ENGLISH },
     { label: formatMessage({ id: "languages.fr-FR" }), value: Locales.FRENCH },
     { label: formatMessage({ id: "languages.de-DE" }), value: Locales.GERMAN },
   ]
+
   return (
     <div>
       <Typography variant="h6">

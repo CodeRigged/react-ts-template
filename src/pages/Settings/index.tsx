@@ -6,6 +6,7 @@ import GeneralTab from "./GeneralTab"
 
 const SettingsPage = () => {
   const { formatMessage } = useIntl()
+
   const tabs: TabType[] = [
     { label: formatMessage({ id: "pages.settings.tabs.general.title" }), content: <GeneralTab /> },
     { label: formatMessage({ id: "pages.settings.tabs.advanced.title" }), content: <AdvancedTab /> },

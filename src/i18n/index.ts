@@ -1,15 +1,24 @@
 import { useEffect, useState } from "react"
 import { useAppStore, useLocaleStore } from "~/stores/index"
-import { useErrorStore } from "~/stores/state-handlers"
+import { Locales } from "~/types/enums"
 import { flattenObject } from "../utils"
 import defaultLocale from "./json/en-US.json"
 
-const LocalesData = {
-  "en-US": () => import("./json/en-US.json"),
-  "de-DE": () => import("./json/de-DE.json"),
-  "fr-FR": () => import("./json/fr-FR.json"),
-  // add more locales here
+/**
+ * Helper function to dynamically import locale data.
+ *
+ * @param {Locales} locale - The selected locale.
+ * @return {Promise<object>} - The imported locale data.
+ */
+const importLocaleData = async (locale: Locales) => {
+  try {
+    return await import(`./json/${locale}.json`)
+  } catch {
+    console.warn(`Locale "${locale}" not found. Falling back to default.`)
+    return { default: defaultLocale } // Fallback to defaultLocale
+  }
 }
+
 /**
  * Custom hook to load messages based on the selected locale.
  *
@@ -18,18 +27,21 @@ const LocalesData = {
 export const useLocaleLoader = () => {
   const { selectedLocale } = useLocaleStore()
   const { setIsPending } = useAppStore()
-  const { setError } = useErrorStore()
-  const [messages, setMessages] = useState(flattenObject(defaultLocale))
+  const [messages, setMessages] = useState<Record<string, string>>(flattenObject(defaultLocale))
 
   useEffect(() => {
-    setIsPending(true)
-    LocalesData[selectedLocale]()
-      .then(data => setMessages(flattenObject(data.default)))
-      .catch(error => setError(error))
-      .finally(() => {
+    const loadLocale = async () => {
+      setIsPending(true)
+      try {
+        const data = await importLocaleData(selectedLocale)
+        setMessages(flattenObject(data.default))
+      } finally {
         setIsPending(false)
-      })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedLocale])
+      }
+    }
+
+    loadLocale()
+  }, [selectedLocale, setIsPending])
+
   return { messages, selectedLocale }
 }
