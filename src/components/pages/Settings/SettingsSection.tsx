@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material"
+import { Grid2 as Grid } from "@mui/material"
 import { ReactElement } from "react"
 
 interface SettingsSectionProps {
@@ -16,7 +16,7 @@ const SettingsSection = ({ components }: SettingsSectionProps) => {
   return (
     <Grid className="section" container alignItems="center" spacing={2}>
       {components.map((component, i) => (
-        <Grid item xs={12} md={6} key={`component-${i}`}>
+        <Grid size={{ xs: 12, md: 6 }} key={`component-${i}`}>
           {component}
         </Grid>
       ))}

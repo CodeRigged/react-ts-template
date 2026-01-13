@@ -1,4 +1,4 @@
-import { AppBar, Grid, useTheme } from "@mui/material"
+import { AppBar, Grid2 as Grid, useTheme } from "@mui/material"
 import { ChildComponent } from "~/types/common"
 import AccountMenu from "./AccountMenu"
 import AppLogo from "./AppLogo"
@@ -17,10 +17,8 @@ const NavigationBar = ({ children }: ChildComponent) => {
     <AppBar position="static" color={theme.palette.mode === "light" ? "transparent" : "default"}>
       <Grid container alignItems="center">
         <AppLogo />
-        <Grid item xs>
-          {children}
-        </Grid>
-        <Grid justifySelf="center" item>
+        <Grid size="grow">{children}</Grid>
+        <Grid justifySelf="center">
           <AccountMenu />
           <ThemeSwitch />
         </Grid>
