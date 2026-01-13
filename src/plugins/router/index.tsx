@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
+import LogoutPage from "~/components/pages/LogoutPage"
 import AppLayout from "~/layouts/AppLayout"
 import LandingPage from "~/pages/Landing"
 import ProfilePage from "~/pages/Profile"
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
         path: "/settings",
         element: <SettingsPage />,
       },
+      {
+        path: "/logout",
+        element: <LogoutPage />,
+      },
+      { path: "*", element: <div>404 Not Found</div> },
     ],
   },
 ])
