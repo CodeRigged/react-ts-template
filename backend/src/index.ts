@@ -1,6 +1,7 @@
 import bodyParser from "body-parser";
 import cors from "cors";
 import express from "express";
+import { Locales } from "shared/types";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,6 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Basic route
 app.get("/", (_req, res) => {
   res.json({ message: "Hello from the Backend!" });
+});
+
+// Route to get supported languages
+app.get("/languages", (_req, res) => {
+  res.json({ languages: Object.values(Locales) });
 });
 
 // Start server

@@ -5,7 +5,8 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.3.5"
+    "mongoose": "^8.3.5",
+    "shared": "workspace:*"
   },
   "description": "A simple todo list REST API",
   "devDependencies": {
@@ -19,7 +20,7 @@
   "keywords": [],
   "license": "MIT",
   "main": "build/index.js",
-  "name": "backend-template",
+  "name": "express-ts-template",
   "scripts": {
     "build": "tsc --incremental",
     "clean": "rm -rf build tsconfig.tsbuildinfo",
