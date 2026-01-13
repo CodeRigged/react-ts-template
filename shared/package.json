@@ -1,0 +1,21 @@
+{
+  "author": "https://github.com/CodeRigged",
+  "description": "A code library for validation, reusable in the frontend and backend.",
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  },
+  "files": [
+    "types"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "main": "build/index.js",
+  "name": "shared",
+  "scripts": {
+    "build": "tsc --incremental",
+    "clean": "rm -rf build tsconfig.tsbuildinfo",
+    "start:dev": "tsc -w --incremental"
+  },
+  "types": "build/index.d.ts",
+  "version": "1.0.0"
+}

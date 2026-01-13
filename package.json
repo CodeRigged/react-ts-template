@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-app",
+  "name": "fullstack-app-template",
   "version": "1.0.0",
   "description": "A fullstack example of a pnpm workspace.",
   "main": "index.js",

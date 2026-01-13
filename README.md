@@ -53,11 +53,11 @@ npm install -g pnpm
 
 - `frontend/` – React TypeScript frontend app
 - `backend/` – Backend service (add your backend code here)
-- `packages/` – Shared packages (if any)
+- `shared/` – Shared types, enums, and configuration files (if any)
 
 ## Troubleshooting
 
-- Make sure you are using the correct Node.js and pnpm versions.
+- Make sure you are using the correct Node.js (>=20.19.0) and pnpm versions.
 - If you encounter issues, try running `pnpm install` again.
 
 ## License
