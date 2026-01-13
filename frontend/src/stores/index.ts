@@ -1,7 +1,7 @@
 import { PaletteMode } from "@mui/material"
+import { Locales } from "shared/types"
 import { create } from "zustand"
 import { persist } from "zustand/middleware"
-import { Locales } from "~/types/enums"
 import { createPendingSlice, PendingState } from "./state-handlers"
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type

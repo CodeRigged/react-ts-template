@@ -1,9 +1,9 @@
 import { Divider, Typography } from "@mui/material"
 import { FormattedMessage, useIntl } from "react-intl"
+import { Locales } from "shared/types"
 import SelectBox, { SelectBoxOption } from "~/components/inputs/select/SelectBox"
 import SettingsSection from "~/components/pages/Settings/SettingsSection"
 import { useLocaleStore } from "~/stores/index"
-import { Locales } from "~/types/enums"
 
 const GeneralTab = () => {
   const { formatMessage } = useIntl()
