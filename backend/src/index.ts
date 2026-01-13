@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Basic route
 app.get("/", (_req, res) => {
-  res.json({ message: "Hello from Express!" });
+  res.json({ message: "Hello from the Backend!" });
 });
 
 // Start server
