@@ -1,4 +1,5 @@
-import LinkButton from "~/components/inputs/buttons/LinkButton"
+import { Home } from "@mui/icons-material"
+import LinkIconButton from "~/components/inputs/buttons/LinkIconButton"
 
 /**
  * A function that renders the AppLogo component.
@@ -8,6 +9,6 @@ import LinkButton from "~/components/inputs/buttons/LinkButton"
  * @return {JSX.Element} The rendered AppLogo component.
  */
 const AppLogo = () => {
-  return <LinkButton label="LOGO" to="/" />
+  return <LinkIconButton Icon={Home} to="/" />
 }
 export default AppLogo
