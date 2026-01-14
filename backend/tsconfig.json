@@ -8,7 +8,7 @@
     "types": ["node"],
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,8 +23,8 @@
     /* Path aliases */
     "baseUrl": "./src",
     "paths": {
-      "~/utils/*": ["./utils/*"],
-      "~/types/*": ["./types/*"]
+      // example alias
+      // "~/types/*": ["./types/*"]
     },
     "allowSyntheticDefaultImports": true
   },

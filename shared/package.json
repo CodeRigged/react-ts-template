@@ -4,8 +4,12 @@
   "devDependencies": {
     "typescript": "^5.4.2"
   },
+  "exports": {
+    ".": "./build/index.js",
+    "./types": "./build/types/index.js"
+  },
   "files": [
-    "types"
+    "build"
   ],
   "keywords": [],
   "license": "MIT",
@@ -16,6 +20,7 @@
     "clean": "rm -rf build tsconfig.tsbuildinfo",
     "start:dev": "tsc -w --incremental"
   },
+  "type": "module",
   "types": "build/index.d.ts",
   "version": "1.0.0"
 }

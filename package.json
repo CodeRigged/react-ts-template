@@ -11,9 +11,6 @@
   "keywords": [],
   "author": "https://github.com/CodeRigged",
   "license": "MIT",
-  "devDependencies": {
-    "buffer": "^6.0.3"
-  },
   "engines": {
     "node": ">=20.19.0"
   }
