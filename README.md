@@ -4,8 +4,8 @@ This project is a fullstack example using a [pnpm](https://pnpm.io/) workspace. 
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [pnpm](https://pnpm.io/) (v8 or higher recommended)
+- [Node.js](https://nodejs.org/) (v20.19.0 or higher recommended)
+- [pnpm](https://pnpm.io/) (v10.28 or higher recommended)
 
 To install pnpm globally, run:
 
@@ -18,7 +18,7 @@ npm install -g pnpm
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/CodeRigged/react-ts-template.git
+   git clone https://github.com/CodeRigged/fullstack-app-template.git
    cd react-ts-template
    ```
 
@@ -57,7 +57,7 @@ npm install -g pnpm
 
 ## Troubleshooting
 
-- Make sure you are using the correct Node.js (>=20.19.0) and pnpm versions.
+- Make sure you are using the correct Node.js and pnpm versions.
 - If you encounter issues, try running `pnpm install` again.
 
 ## License
