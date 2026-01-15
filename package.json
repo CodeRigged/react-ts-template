@@ -4,6 +4,7 @@
   "description": "A fullstack example of a pnpm workspace.",
   "main": "index.js",
   "scripts": {
+    "predev": "pnpm -F shared build",
     "dev": "pnpm --parallel --stream -r run dev",
     "build": "pnpm --stream -r run build",
     "clean": "rimraf build dist node_modules && pnpm -r run clean"
