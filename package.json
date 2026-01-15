@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "pnpm --parallel --stream -r run dev",
     "build": "pnpm --stream -r run build",
-    "clean": "rm -rf && pnpm -r run clean"
+    "clean": "rimraf build dist node_modules && pnpm -r run clean"
   },
   "keywords": [],
   "author": "https://github.com/CodeRigged",
@@ -15,6 +15,7 @@
     "node": ">=20.19.0"
   },
   "devDependencies": {
+    "rimraf": "^6.1.2",
     "wait-on": "^9.0.3"
   }
 }
