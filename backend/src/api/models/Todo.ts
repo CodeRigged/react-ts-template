@@ -1,9 +1,7 @@
-import { Schema, model, Document } from "mongoose";
+import { Document, Schema, model } from "mongoose";
+import { Todo as TodoType } from "shared/types";
 
-export interface ITodo extends Document {
-  text: string;
-  completed: boolean;
-}
+export type ITodo = TodoType & Document;
 
 const todoSchema = new Schema<ITodo>({
   text: { type: String, required: true },
