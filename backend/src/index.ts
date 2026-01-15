@@ -27,6 +27,13 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get("/health", async (_req, res) => {
+  if (!mongoose.connection.readyState) {
+    return res.status(503).json({ status: "db not ready" });
+  }
+  res.json({ status: "ok" });
+});
+
 // Route to get supported languages
 app.get("/languages", (_req, res) => {
   res.json({ languages: Object.values(Locales) });
