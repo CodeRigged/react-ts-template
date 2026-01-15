@@ -20,13 +20,13 @@
   },
   "keywords": [],
   "license": "MIT",
-  "main": "build/index.js",
+  "main": "build/app.js",
   "name": "express-ts-template",
   "scripts": {
     "build": "tsc --incremental",
     "clean": "rm -rf build tsconfig.tsbuildinfo",
-    "dev": "npx vite-node src/index.ts",
-    "start": "node build/index.js"
+    "dev": "npx vite-node src/app.ts",
+    "start": "node build/app.js"
   },
   "type": "module",
   "version": "1.0.0"
