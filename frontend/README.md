@@ -16,14 +16,14 @@ This package is intended to be used as part of the monorepo. To install dependen
 
 ```bash
 pnpm install
-pnpm --filter ./frontend dev
+pnpm --filter react-ts-template dev
 ```
 
 You can also build or lint the frontend specifically:
 
 ```bash
-pnpm --filter ./frontend build
-pnpm --filter ./frontend lint
+pnpm --filter react-ts-template build
+pnpm --filter react-ts-template lint
 ```
 
 ## Project Structure
@@ -31,5 +31,10 @@ pnpm --filter ./frontend lint
 - `src/` – Application source code
 - `public/` – Static assets
 - `index.html` – Main HTML entry point
+
+## Notes
+
+- The frontend expects the backend API to be running on http://localhost:5000 for development.
+- Shared types and enums are imported from the `shared` package (see monorepo root).
 
 Happy coding!

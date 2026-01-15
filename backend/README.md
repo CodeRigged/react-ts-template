@@ -23,19 +23,23 @@ This package is intended to be used as part of the monorepo. To install dependen
 
 ```bash
 pnpm install
-pnpm --filter ./backend dev
+pnpm --filter express-ts-template dev
 ```
 
 You can also build or start the backend specifically:
 
 ```bash
-pnpm --filter ./backend build
-pnpm --filter ./backend start
+pnpm --filter express-ts-template build
+pnpm --filter express-ts-template start
 ```
 
 ## Project Structure
 
 - `src/` – Application source code
+  - `api/controllers/` – Express route handlers (controllers)
+  - `api/models/` – Mongoose models
+  - `api/routes/` – Express routers
+  - `api/services/` – Business/data logic
 - `build/` – Compiled JavaScript output
 - `package.json` – Project metadata and scripts
 
@@ -45,6 +49,7 @@ pnpm --filter ./backend start
 - `POST /todos` – Add a new todo (body: `{ text: string }`)
 - `PUT /todos/:id` – Edit a todo's text (body: `{ text: string }`)
 - `DELETE /todos/:id` – Delete a todo by ID
+- `GET /health` – Health check endpoint (returns 200 if DB is connected)
 
 Example todo object:
 

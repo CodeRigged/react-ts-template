@@ -1,4 +1,4 @@
-# `@fullstack-app-template/shared`
+# Shared Package
 
 This package contains shared types, enums, and configuration files used across the `fullstack-app-template` pnpm monorepo. It is intended to provide a single source of truth for common definitions, ensuring consistency and reducing duplication between packages.
 
@@ -15,10 +15,18 @@ export enum Locales {
 }
 ```
 
-It can now be used like this in the backend and frontend:
+You can import shared types/enums in the backend and frontend like this:
 
 ```ts
 import { Locales } from "shared/types";
+```
+
+## Rebuilding
+
+If you change or add types/enums, rebuild the shared package:
+
+```bash
+pnpm --filter shared build
 ```
 
 ## Note

@@ -6,6 +6,7 @@ This project is a fullstack example using a [pnpm](https://pnpm.io/) workspace. 
 
 - [Node.js](https://nodejs.org/) (v20.19.0 or higher recommended)
 - [pnpm](https://pnpm.io/) (v10.28 or higher recommended)
+- [MongoDB](https://www.mongodb.com/try/download/community) (required for backend; can be run locally or via Docker)
 
 To install pnpm globally, run:
 
@@ -52,13 +53,14 @@ npm install -g pnpm
 ## Project Structure
 
 - `frontend/` – React TypeScript frontend app
-- `backend/` – Backend service (add your backend code here)
-- `shared/` – Shared types, enums, and configuration files (if any)
+- `backend/` – Backend service (Express + MongoDB, with controllers/models/routes/services)
+- `shared/` – Shared TypeScript code (types, enums, utilities) for both frontend and backend
 
 ## Troubleshooting
 
 - Make sure you are using the correct Node.js and pnpm versions.
 - If you encounter issues, try running `pnpm install` again.
+- If the backend fails to connect to MongoDB, ensure MongoDB is running locally (default: mongodb://localhost:27017/todos) or update the `MONGO_URI` environment variable.
 
 ## License
 
