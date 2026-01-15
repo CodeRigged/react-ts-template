@@ -1,6 +1,11 @@
 import { Request, Response } from "express";
 import * as todoService from "../services/todoService";
 
+/**
+ * Controller to handle fetching all todos and sending them in the response.
+ * Responds with a JSON array of todos or an error message.
+ * @route GET /todos
+ */
 export const getTodos = async (_req: Request, res: Response) => {
   try {
     const todos = await todoService.getAllTodos();
@@ -10,6 +15,11 @@ export const getTodos = async (_req: Request, res: Response) => {
   }
 };
 
+/**
+ * Controller to handle creating a new todo from request body.
+ * Returns the created todo or an error message.
+ * @route POST /todos
+ */
 export const createTodo = async (req: Request, res: Response) => {
   try {
     const { text } = req.body;
@@ -21,6 +31,11 @@ export const createTodo = async (req: Request, res: Response) => {
   }
 };
 
+/**
+ * Controller to update a todo's text by ID.
+ * Returns the updated todo or a not found/error message.
+ * @route PUT /todos/:id
+ */
 export const updateTodo = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -36,6 +51,11 @@ export const updateTodo = async (req: Request, res: Response) => {
   }
 };
 
+/**
+ * Controller to delete a todo by its ID.
+ * Returns the deleted todo or a not found/error message.
+ * @route DELETE /todos/:id
+ */
 export const deleteTodo = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;

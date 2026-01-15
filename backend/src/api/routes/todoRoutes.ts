@@ -3,6 +3,7 @@ import * as todoController from "../controllers/todoController";
 
 const router = Router();
 
+// todo routes
 router.get("/", todoController.getTodos);
 router.post("/", todoController.createTodo);
 router.put("/:id", todoController.updateTodo);
