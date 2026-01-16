@@ -17,7 +17,13 @@
     "@types/node": "22.10.2",
     "typescript": "^5.4.2"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "typescript",
+    "template",
+    "backend",
+    "mongoose"
+  ],
   "license": "MIT",
   "main": "build/app.js",
   "name": "express-ts-template",

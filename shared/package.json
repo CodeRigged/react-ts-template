@@ -11,7 +11,11 @@
   "files": [
     "build"
   ],
-  "keywords": [],
+  "keywords": [
+    "shared",
+    "library",
+    "typescript"
+  ],
   "license": "MIT",
   "main": "build/index.js",
   "name": "shared",
