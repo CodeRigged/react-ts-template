@@ -8,6 +8,7 @@ This is the frontend package of a fullstack monorepo managed with [pnpm workspac
 - Settings page with language and theme (dark/light) switch
 - State management via [zustand](https://github.com/pmndrs/zustand)
 - Fast development with [Vite](https://vitejs.dev/)
+- UI components built with [Material UI (MUI)](https://mui.com/)
 - Easy integration with other packages in the monorepo
 
 ## Usage in Monorepo

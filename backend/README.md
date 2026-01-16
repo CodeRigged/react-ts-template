@@ -4,10 +4,9 @@ This is the backend package of a fullstack monorepo managed with [pnpm workspace
 
 ## Features
 
-- Simple RESTful API
+- Simple RESTful API for Todos
 - MongoDB integration with [mongoose](https://mongoosejs.com/)
 - TypeScript-first development
-- Fast development with [ts-node](https://typestrong.org/ts-node/)
 - Shares types and logic with other packages in the monorepo
 
 ## Prerequisites

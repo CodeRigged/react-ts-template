@@ -20,7 +20,7 @@ npm install -g pnpm
 
    ```bash
    git clone https://github.com/CodeRigged/fullstack-app-template.git
-   cd react-ts-template
+   cd ./fullstack-app-template
    ```
 
 2. **Install dependencies for all packages:**
