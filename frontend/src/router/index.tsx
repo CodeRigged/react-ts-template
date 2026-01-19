@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
-import LogoutPage from "~/components/pages/LogoutPage"
 import AppLayout from "~/layouts/AppLayout"
 import LandingPage from "~/pages/Landing"
+import LogoutPage from "~/pages/LogoutPage"
 import ProfilePage from "~/pages/Profile"
 import SettingsPage from "~/pages/Settings"
 

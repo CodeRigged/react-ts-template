@@ -3,7 +3,7 @@ import { IntlProvider } from "react-intl"
 import { RouterProvider } from "react-router-dom"
 import { Locales } from "shared/types"
 import { useLocaleLoader } from "./i18n"
-import router from "./plugins/router"
+import router from "./router"
 import { useAppTheme } from "./theme"
 
 /**
