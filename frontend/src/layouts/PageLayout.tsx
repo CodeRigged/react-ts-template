@@ -6,7 +6,7 @@ interface PageLayoutProps extends ChildComponent {
   documentTitle: string
 }
 /**
- * PageLayout component that renders a page with a title and some content.
+ * PageLayout component that renders a page with a title and content.
  *
  * @param {PageLayoutProps} props - The props object containing the document title and the children components.
  * @param {string} props.documentTitle - The title of the page to be rendered.

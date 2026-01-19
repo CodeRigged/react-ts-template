@@ -4,11 +4,13 @@ import LoadingOverlay from "~/components/feedback/LoadingOverlay"
 import NavigationBar from "~/components/navigation/NavigationBar"
 
 /**
- * Renders the main layout of the application.
+ * Main application layout component.
  *
- * @todo update navigation bar children
+ * Includes the loading overlay, navigation bar, error alert, and renders the current route.
  *
- * @return {JSX.Element} The rendered layout.
+ * @todo Update the navigation bar to include desired children and links.
+ *
+ * @returns {JSX.Element} The main layout structure.
  */
 const AppLayout = () => (
   <>

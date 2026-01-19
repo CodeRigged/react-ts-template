@@ -7,6 +7,7 @@ import { LinkComponent } from "~/types/common"
 interface LinkIconButtonProps extends LinkComponent {
   Icon: ComponentType<SvgIconProps>
 }
+
 /**
  * Renders a LinkIconButton component.
  *

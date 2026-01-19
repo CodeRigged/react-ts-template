@@ -6,6 +6,11 @@ import { useLocaleLoader } from "./i18n"
 import router from "./plugins/router"
 import { useAppTheme } from "./theme"
 
+/**
+ * Main application component that sets up theming, internationalization, and routing.
+ *
+ * @returns {JSX.Element} The main application component.
+ */
 function App() {
   const theme = useAppTheme()
   const { selectedLocale, messages } = useLocaleLoader()

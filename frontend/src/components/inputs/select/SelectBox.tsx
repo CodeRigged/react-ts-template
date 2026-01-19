@@ -8,7 +8,7 @@ export type SelectBoxOption<T> = {
 }
 
 interface SelectBoxProps {
-  label?: string
+  label?: React.ReactNode
   onChange: (event: SyntheticEvent, selectedOption: SelectBoxOption<unknown> | null) => void
   options: SelectBoxOption<unknown>[]
   selected: unknown
@@ -26,7 +26,7 @@ interface SelectBoxProps {
 const SelectBox = ({ label, options, selected, onChange }: SelectBoxProps) => {
   const selectedOption = options.find(option => option.value === selected)
   const containsHints = options.some(option => option.hint)
-  const hint = containsHints ? selectedOption?.hint ?? " " : ""
+  const hint = containsHints ? (selectedOption?.hint ?? " ") : ""
 
   return (
     <Autocomplete

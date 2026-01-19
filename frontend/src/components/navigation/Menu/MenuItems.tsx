@@ -5,7 +5,7 @@ import { Link, To } from "react-router-dom"
 type ItemProps = {
   icon?: ReactNode
   props?: MenuItemProps
-  text: string
+  text: string | ReactNode
   to?: To
 }
 
