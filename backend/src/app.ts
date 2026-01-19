@@ -1,16 +1,15 @@
 import bodyParser from "body-parser";
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import { Locales } from "shared/types";
 import todoRoutes from "./api/routes/todoRoutes";
 
+dotenv.config();
+
 // MongoDB connection
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/todos";
-mongoose
-  .connect(MONGO_URI)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+const MONGO_URI = `${process.env.MONGO_URI}`;
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -36,7 +35,16 @@ app.get("/languages", (_req, res) => {
 // Todos API
 app.use("/todos", todoRoutes);
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// Connect to DB and start server
+mongoose
+  .connect(MONGO_URI)
+  .then(() => {
+    console.log("Connected to MongoDB");
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+    process.exit(1);
+  });

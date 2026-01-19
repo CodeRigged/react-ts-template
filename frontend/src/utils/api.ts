@@ -1,5 +1,3 @@
-const API_BASE_URL = "http://localhost:5000"
-
 /**
  * A utility function to make API requests to the backend.
  *
@@ -8,5 +6,5 @@ const API_BASE_URL = "http://localhost:5000"
  * @returns A promise that resolves to the fetch response.
  */
 export function apiFetch(path: string, options?: RequestInit) {
-  return fetch(`${API_BASE_URL}${path}`, options)
+  return fetch(`${import.meta.env.VITE_API_BASE_URL}${path}`, options)
 }
