@@ -10,9 +10,9 @@ const GeneralTab = () => {
   const { selectedLocale, updateLocale } = useLocaleStore()
 
   const localeOptions: SelectBoxOption<Locales>[] = [
-    { label: formatMessage({ id: "languages.en-US" }), value: Locales.ENGLISH },
-    { label: formatMessage({ id: "languages.fr-FR" }), value: Locales.FRENCH },
-    { label: formatMessage({ id: "languages.de-DE" }), value: Locales.GERMAN },
+    { label: formatMessage({ id: "languages.en-US", defaultMessage: "English" }), value: Locales.ENGLISH },
+    { label: formatMessage({ id: "languages.fr-FR", defaultMessage: "French" }), value: Locales.FRENCH },
+    { label: formatMessage({ id: "languages.de-DE", defaultMessage: "German" }), value: Locales.GERMAN },
   ]
 
   return (
@@ -24,7 +24,7 @@ const GeneralTab = () => {
       <SettingsSection
         components={[
           <SelectBox
-            label={formatMessage({ id: "pages.settings.tabs.general.sections.locale" })}
+            label={<FormattedMessage id="pages.settings.tabs.general.sections.locale" defaultMessage="Language" />}
             selected={selectedLocale}
             options={localeOptions}
             onChange={(_event, selectedOption) => updateLocale(selectedOption?.value as Locales)}

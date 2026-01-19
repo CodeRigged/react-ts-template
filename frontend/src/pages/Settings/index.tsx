@@ -8,11 +8,17 @@ const SettingsPage = () => {
   const { formatMessage } = useIntl()
 
   const tabs: TabType[] = [
-    { label: formatMessage({ id: "pages.settings.tabs.general.title" }), content: <GeneralTab /> },
-    { label: formatMessage({ id: "pages.settings.tabs.advanced.title" }), content: <AdvancedTab /> },
+    {
+      label: formatMessage({ id: "pages.settings.tabs.general.title", defaultMessage: "General" }),
+      content: <GeneralTab />,
+    },
+    {
+      label: formatMessage({ id: "pages.settings.tabs.advanced.title", defaultMessage: "Advanced" }),
+      content: <AdvancedTab />,
+    },
   ]
   return (
-    <PageLayout documentTitle={formatMessage({ id: "pages.settings.title" })}>
+    <PageLayout documentTitle={formatMessage({ id: "pages.settings.title", defaultMessage: "Settings" })}>
       <Tabs tabs={tabs} />
     </PageLayout>
   )

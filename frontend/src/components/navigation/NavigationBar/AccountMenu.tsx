@@ -1,18 +1,17 @@
 import { AccountCircle, Logout, Settings } from "@mui/icons-material"
 import { Divider, IconButton } from "@mui/material"
-import { useIntl } from "react-intl"
+import { FormattedMessage } from "react-intl"
 import AppMenu from "../Menu"
 import { MenuListItem } from "../Menu/MenuItems"
 
 /**
  * Renders an account menu component.
  *
- * @todo Change Menu Items
+ * @todo Change to desired Menu Items
  *
  * @return {JSX.Element} The rendered account menu component.
  */
 const AccountMenu = () => {
-  const { formatMessage } = useIntl()
   return (
     <AppMenu
       Activator={({ onClick }) => (
@@ -21,18 +20,22 @@ const AccountMenu = () => {
         </IconButton>
       )}
       items={[
-        <MenuListItem icon={<AccountCircle />} text={formatMessage({ id: "pages.profile.title" })} to="/profile" />,
+        <MenuListItem
+          icon={<AccountCircle />}
+          text={<FormattedMessage id="pages.profile.title" defaultMessage="Profile" />}
+          to="/profile"
+        />,
         <Divider />,
         <MenuListItem
           dense
           icon={<Settings fontSize="small" />}
-          text={formatMessage({ id: "pages.settings.title" })}
+          text={<FormattedMessage id="pages.settings.title" defaultMessage="Settings" />}
           to="/settings"
         />,
         <MenuListItem
           dense
           icon={<Logout fontSize="small" />}
-          text={formatMessage({ id: "pages.logout.title" })}
+          text={<FormattedMessage id="pages.logout.title" defaultMessage="Logout" />}
           to="/logout"
         />,
       ]}
