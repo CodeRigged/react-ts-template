@@ -1,5 +1,5 @@
+import { Nullable } from "shared/types"
 import { create, StateCreator } from "zustand"
-import { Nullable } from "~/types/utils"
 
 interface ErrorStore {
   error: Nullable<Error>

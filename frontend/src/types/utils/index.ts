@@ -1,12 +1,4 @@
 /**
- * Represents a type that can be either the specified type `T` or `null`.
- * Useful for indicating that a value may be absent.
- *
- * @template T - The type to make nullable.
- */
-export type Nullable<T> = T | null
-
-/**
  * Generates dot-separated string paths for all string properties and nested objects within type `T`.
  * - For string properties, includes the property key as a path.
  * - For object properties, recursively generates dot paths for nested string properties.

@@ -1,3 +1,4 @@
+import { Nullable } from "shared/types";
 import { ITodo, Todo } from "../models/Todo";
 
 /**
@@ -22,20 +23,20 @@ export const createTodo = async (text: string): Promise<ITodo> => {
  * Update the text of a todo by its ID.
  * @param {string} id - The ID of the todo to update
  * @param {string} text - The new text for the todo
- * @returns {Promise<ITodo | null>} The updated todo document, or null if not found
+ * @returns {Promise<Nullable<ITodo>>} The updated todo document, or null if not found
  */
 export const updateTodo = async (
   id: string,
-  text: string
-): Promise<ITodo | null> => {
+  text: string,
+): Promise<Nullable<ITodo>> => {
   return Todo.findByIdAndUpdate(id, { text }, { new: true });
 };
 
 /**
  * Delete a todo by its ID.
  * @param {string} id - The ID of the todo to delete
- * @returns {Promise<ITodo | null>} The deleted todo document, or null if not found
+ * @returns {Promise<Nullable<ITodo>>} The deleted todo document, or null if not found
  */
-export const deleteTodo = async (id: string): Promise<ITodo | null> => {
+export const deleteTodo = async (id: string): Promise<Nullable<ITodo>> => {
   return Todo.findByIdAndDelete(id);
 };
