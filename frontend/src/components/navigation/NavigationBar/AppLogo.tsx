@@ -1,4 +1,4 @@
-import { Home } from "@mui/icons-material"
+import HomeIcon from "@mui/icons-material/Home"
 import LinkIconButton from "~/components/inputs/buttons/LinkIconButton"
 
 /**
@@ -9,6 +9,6 @@ import LinkIconButton from "~/components/inputs/buttons/LinkIconButton"
  * @return {JSX.Element} The rendered AppLogo component.
  */
 const AppLogo = () => {
-  return <LinkIconButton Icon={Home} to="/" />
+  return <LinkIconButton Icon={HomeIcon} to="/" />
 }
 export default AppLogo

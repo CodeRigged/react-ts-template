@@ -1,4 +1,6 @@
-import { AccountCircle, Logout, Settings } from "@mui/icons-material"
+import AccountCircleIcon from "@mui/icons-material/AccountCircle"
+import LogoutIcon from "@mui/icons-material/Logout"
+import SettingsIcon from "@mui/icons-material/Settings"
 import { Divider, IconButton } from "@mui/material"
 import { FormattedMessage } from "react-intl"
 import AppMenu from "../Menu"
@@ -16,25 +18,25 @@ const AccountMenu = () => {
     <AppMenu
       Activator={({ onClick }) => (
         <IconButton onClick={onClick} sx={{ ml: 2 }} aria-haspopup="true">
-          <AccountCircle />
+          <AccountCircleIcon />
         </IconButton>
       )}
       items={[
         <MenuListItem
-          icon={<AccountCircle />}
+          icon={<AccountCircleIcon />}
           text={<FormattedMessage id="pages.profile.title" defaultMessage="Profile" />}
           to="/profile"
         />,
         <Divider />,
         <MenuListItem
           dense
-          icon={<Settings fontSize="small" />}
+          icon={<SettingsIcon fontSize="small" />}
           text={<FormattedMessage id="pages.settings.title" defaultMessage="Settings" />}
           to="/settings"
         />,
         <MenuListItem
           dense
-          icon={<Logout fontSize="small" />}
+          icon={<LogoutIcon fontSize="small" />}
           text={<FormattedMessage id="pages.logout.title" defaultMessage="Logout" />}
           to="/logout"
         />,
