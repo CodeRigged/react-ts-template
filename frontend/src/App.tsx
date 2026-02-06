@@ -19,7 +19,9 @@ function App() {
     <IntlProvider messages={messages} locale={selectedLocale} defaultLocale={Locales.ENGLISH}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <RouterProvider router={router} />
+        <div data-testid="app-main-container">
+          <RouterProvider router={router} />
+        </div>
       </ThemeProvider>
     </IntlProvider>
   )
