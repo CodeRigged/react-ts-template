@@ -14,7 +14,7 @@ const LoadingOverlay = () => {
       <Grid container flexDirection="column" justifyContent="center" alignItems="center">
         <CircularProgress color="inherit" />
         {text && (
-          <Typography className="pt-1" component="div" variant="caption">
+          <Typography data-testid="loading-text" className="pt-1" component="div" variant="caption">
             {text}
           </Typography>
         )}

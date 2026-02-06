@@ -16,7 +16,7 @@ interface PageLayoutProps extends ChildComponent {
 const PageLayout = ({ documentTitle, children }: PageLayoutProps) => {
   useDocumentTitle(documentTitle)
   return (
-    <div className="container">
+    <div className="container" data-testid="app-main-container">
       <Typography variant="h4">{documentTitle}</Typography>
       {children}
     </div>
