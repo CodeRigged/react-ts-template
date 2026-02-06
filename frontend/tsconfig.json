@@ -33,6 +33,6 @@
       "~/utils/*": ["./utils/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
