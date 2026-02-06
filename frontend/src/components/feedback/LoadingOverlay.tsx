@@ -1,4 +1,4 @@
-import { Backdrop, CircularProgress, Grid2 as Grid, Typography } from "@mui/material"
+import { Backdrop, CircularProgress, Grid, Typography } from "@mui/material"
 import { useAppStore } from "~/stores/index"
 
 /**

@@ -1,4 +1,4 @@
-import { AppBar, Grid2 as Grid, useTheme } from "@mui/material"
+import { AppBar, Grid, useTheme } from "@mui/material"
 import { ChildComponent } from "~/types/common"
 import AccountMenu from "./AccountMenu"
 import AppLogo from "./AppLogo"
