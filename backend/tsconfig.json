@@ -5,7 +5,7 @@
     "lib": ["ES2020"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["node"],
+    "types": ["vitest/globals", "node"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -28,6 +28,6 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"],
   "references": []
 }
