@@ -2,7 +2,7 @@ import CloseIcon from "@mui/icons-material/Close"
 import { Alert, AlertTitle, IconButton, Snackbar } from "@mui/material"
 import { useErrorStore } from "~/stores/state-handlers"
 
-const autoHideDuration = 10000
+export const autoHideDuration = 10000
 
 /**
  * Renders the AppAlert component displaying error messages in a Snackbar.
