@@ -10,6 +10,7 @@ const to = "/icon-link"
 /**
  * Helper to setup the LinkIconButton component with required props.
  * @param {IconButtonProps & { "data-testid"?: string }} props - Props to override defaults.
+ * @returns The result of rendering the LinkIconButton component with specified props.
  */
 const setup = (props: IconButtonProps & { "data-testid"?: string } = {}) => {
   return render(
