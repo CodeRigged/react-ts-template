@@ -1,6 +1,8 @@
-import cors from "cors";
 import bodyParser from "body-parser";
+import cors from "cors";
 import { Express } from "express";
+import pino from "pino-http";
+import logger from "./app.logger";
 
 /**
  * Applies all global middleware to the Express app.
@@ -9,4 +11,5 @@ export function applyMiddleware(app: Express) {
   app.use(cors());
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(pino({ logger }));
 }

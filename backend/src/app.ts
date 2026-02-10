@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-import { applyMiddleware } from "./api/app.middleware";
 import todoRoutes from "./api/routes/todoRoutes";
+import logger from "./app.logger";
+import { applyMiddleware } from "./app.middleware";
 
 dotenv.config();
 
@@ -29,13 +30,13 @@ app.use("/todos", todoRoutes);
 mongoose
   .connect(MONGO_URI)
   .then(() => {
-    console.log("Connected to MongoDB");
+    logger.info("Connected to MongoDB");
     app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+      logger.info(`Server is running on port ${PORT}`);
     });
   })
   .catch((err) => {
-    console.error("MongoDB connection error:", err);
+    logger.error("MongoDB connection error:", err);
     process.exit(1);
   });
 
