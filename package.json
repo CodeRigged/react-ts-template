@@ -24,7 +24,7 @@
     "build": "pnpm --stream -r run build",
     "clean": "rimraf build dist node_modules && pnpm -r run clean",
     "dev": "pnpm --parallel --stream -r run dev",
-    "predev": "pnpm -F shared build",
+    "predev": "node ./createEnvFiles.mjs && pnpm -F shared build",
     "test": "pnpm --parallel --stream -r run test"
   },
   "version": "1.0.0"
