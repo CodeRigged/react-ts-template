@@ -1,8 +1,8 @@
+import logger from "@logger";
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-import todoRoutes from "./api/routes/todoRoutes";
-import logger from "./app.logger";
+import todoRoutes from "~/routes/todoRoutes";
 import { applyMiddleware } from "./app.middleware";
 
 dotenv.config();

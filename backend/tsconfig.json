@@ -23,10 +23,18 @@
     /* Path aliases */
     "baseUrl": "./src",
     "paths": {
-      // example alias
-      // "~/types/*": ["./types/*"]
+      "~/*": ["./*"],
+      "~/controllers/*": ["./api/controllers/*"],
+      "~/models/*": ["./api/models/*"],
+      "~/routes/*": ["./api/routes/*"],
+      "~/services/*": ["./api/services/*"],
+      "@logger": ["./app.logger.ts"]
     },
     "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register"]
   },
   "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"],
   "references": []

@@ -3,8 +3,8 @@ import { ObjectId } from "mongodb";
 import type { Todo } from "shared/types";
 import request from "supertest";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import app from "../../app";
-import * as todoService from "../services/todoService";
+import app from "~/app";
+import * as todoService from "~/services/todoService";
 
 const mockTodo = (overrides: Partial<Todo> = {}): Todo => ({
   _id: new ObjectId().toHexString() as unknown as ObjectId,

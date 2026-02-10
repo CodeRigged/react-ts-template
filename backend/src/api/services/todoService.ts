@@ -1,5 +1,5 @@
 import { Nullable } from "shared/types";
-import { ITodo, Todo } from "../models/Todo";
+import { ITodo, Todo } from "~/models/Todo";
 
 /**
  * Fetch all todos from the database.

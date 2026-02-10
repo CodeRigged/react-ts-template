@@ -1,6 +1,6 @@
+import logger from "@logger";
 import { Request, Response } from "express";
-import logger from "../../app.logger";
-import * as todoService from "../services/todoService";
+import * as todoService from "~/services/todoService";
 
 /**
  * Controller to handle fetching all todos and sending them in the response.
