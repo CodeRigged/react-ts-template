@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-import { Locales } from "shared/types";
 import { applyMiddleware } from "./api/app.middleware";
 import todoRoutes from "./api/routes/todoRoutes";
 
@@ -21,11 +20,6 @@ app.get("/health", async (_req, res) => {
     return res.status(503).json({ status: "db not ready" });
   }
   res.json({ status: "ok" });
-});
-
-// Route to get supported languages
-app.get("/languages", (_req, res) => {
-  res.json({ languages: Object.values(Locales) });
 });
 
 // Todos API
