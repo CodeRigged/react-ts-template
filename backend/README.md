@@ -60,4 +60,16 @@ Example todo object:
 }
 ```
 
+## Testing
+
+This backend supports automated testing using [Vitest](https://vitest.dev/) and [Supertest](https://github.com/ladjs/supertest) for HTTP endpoint testing. Example tests can be found in `src/api/controllers/todoController.test.ts`.
+
+To run the tests:
+
+```bash
+pnpm --filter express-ts-template test
+```
+
+Tests cover all main API endpoints and error cases. You can add your own tests in the same style for additional coverage.
+
 Happy coding!

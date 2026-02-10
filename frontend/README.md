@@ -38,4 +38,16 @@ pnpm --filter react-ts-template lint
 - The frontend expects the backend API to be running on http://localhost:5000 for development.
 - Shared types and enums are imported from the `shared` package (see monorepo root).
 
+## Testing
+
+This frontend supports automated testing using [Vitest](https://vitest.dev/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/). Example tests can be found in the `__tests__` directory and in component files with the `.test.tsx` suffix (e.g., `src/components/feedback/LoadingOverlay.test.tsx`).
+
+To run the tests:
+
+```bash
+pnpm --filter react-ts-template test
+```
+
+Tests cover main UI components and app logic. You can add your own tests in the same style for additional coverage.
+
 Happy coding!
