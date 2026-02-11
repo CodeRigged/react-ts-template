@@ -10,9 +10,9 @@ export type SelectBoxOption<T> = {
 
 interface SelectBoxProps {
   label?: React.ReactNode
-  onChange: (event: SyntheticEvent, selectedOption: Nullable<SelectBoxOption<unknown>>) => void
   options: SelectBoxOption<unknown>[]
   selected: unknown
+  onChange: (event: SyntheticEvent, selectedOption: Nullable<SelectBoxOption<unknown>>) => void
 }
 
 /**
@@ -24,7 +24,7 @@ interface SelectBoxProps {
  * @param {(event: SyntheticEvent, selectedOption:  Nullable<SelectBoxOption<unknown>>) => void} onChange - The callback function to handle value change.
  * @return {ReactElement} The rendered select box component.
  */
-const SelectBox = ({ label, options, selected, onChange }: SelectBoxProps) => {
+const SelectBox = ({ label, onChange, options, selected }: SelectBoxProps) => {
   const selectedOption = options.find(option => option.value === selected)
   const containsHints = options.some(option => option.hint)
   const hint = containsHints ? (selectedOption?.hint ?? " ") : ""

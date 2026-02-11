@@ -8,7 +8,7 @@ const LandingPage = () => {
   const { formatMessage } = useIntl()
 
   return (
-    <PageLayout documentTitle={formatMessage({ id: "pages.landing.title", defaultMessage: "Landing Page" })}>
+    <PageLayout documentTitle={formatMessage({ defaultMessage: "Landing Page", id: "pages.landing.title" })}>
       <TodoList />
     </PageLayout>
   )

@@ -28,7 +28,7 @@ const Tabs = ({ tabs }: TabsProps) => {
   return (
     <Box>
       <PanelHeader selected={selected} setSelected={setSelected} tabs={tabs} />
-      {tabs.map(({ label, content }, i) => (
+      {tabs.map(({ content, label }, i) => (
         <TabPanel key={label} index={i} value={selected}>
           <div className="container">{content}</div>
         </TabPanel>

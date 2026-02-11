@@ -16,7 +16,7 @@ const AppAlert = () => {
   const { error, setError } = useErrorStore()
   return (
     <Snackbar
-      anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       open={!!error}
       autoHideDuration={autoHideDuration}
       onClose={() => setError()}

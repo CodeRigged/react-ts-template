@@ -5,7 +5,7 @@ import PageLayout from "~/layouts/PageLayout"
 const ProfilePage = () => {
   const { formatMessage } = useIntl()
   return (
-    <PageLayout documentTitle={formatMessage({ id: "pages.profile.title", defaultMessage: "Profile" })}>
+    <PageLayout documentTitle={formatMessage({ defaultMessage: "Profile", id: "pages.profile.title" })}>
       TODO
     </PageLayout>
   )

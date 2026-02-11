@@ -14,7 +14,7 @@ interface PageLayoutProps extends ChildComponent {
  * @param {ReactNode} props.children - The children components to be rendered.
  * @return {JSX.Element} The rendered page layout.
  */
-const PageLayout = ({ documentTitle, children }: PageLayoutProps) => {
+const PageLayout = ({ children, documentTitle }: PageLayoutProps) => {
   useDocumentTitle(documentTitle)
   return (
     <div className="container" data-testid="app-main-container">

@@ -11,9 +11,9 @@ const GeneralTab = () => {
   const { selectedLocale, updateLocale } = useLocaleStore()
 
   const localeOptions: SelectBoxOption<Locales>[] = [
-    { label: formatMessage({ id: "languages.en-US", defaultMessage: "English" }), value: Locales.ENGLISH },
-    { label: formatMessage({ id: "languages.fr-FR", defaultMessage: "French" }), value: Locales.FRENCH },
-    { label: formatMessage({ id: "languages.de-DE", defaultMessage: "German" }), value: Locales.GERMAN },
+    { label: formatMessage({ defaultMessage: "English", id: "languages.en-US" }), value: Locales.ENGLISH },
+    { label: formatMessage({ defaultMessage: "French", id: "languages.fr-FR" }), value: Locales.FRENCH },
+    { label: formatMessage({ defaultMessage: "German", id: "languages.de-DE" }), value: Locales.GERMAN },
   ]
 
   return (

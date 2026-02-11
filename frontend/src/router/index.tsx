@@ -8,27 +8,27 @@ import SettingsPage from "~/pages/Settings"
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <AppLayout />,
     children: [
       {
-        path: "/",
         element: <LandingPage />,
+        path: "/",
       },
       {
-        path: "/profile",
         element: <ProfilePage />,
+        path: "/profile",
       },
       {
-        path: "/settings",
         element: <SettingsPage />,
+        path: "/settings",
       },
       {
-        path: "/logout",
         element: <LogoutPage />,
+        path: "/logout",
       },
-      { path: "*", element: <div>404 Not Found</div> },
+      { element: <div>404 Not Found</div>, path: "*" },
     ],
+    element: <AppLayout />,
+    path: "/",
   },
 ])
 

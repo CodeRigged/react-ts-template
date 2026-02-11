@@ -44,7 +44,7 @@ describe("LinkIconButton", () => {
 
   it("calls onClick handler when clicked", () => {
     const handleClick = vi.fn()
-    setup({ onClick: handleClick, "data-testid": "clickable-btn" })
+    setup({ "data-testid": "clickable-btn", onClick: handleClick })
     const iconLinkButton = screen.getByTestId("clickable-btn")
     act(() => {
       fireEvent.click(iconLinkButton)

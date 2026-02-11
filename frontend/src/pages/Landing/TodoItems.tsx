@@ -5,7 +5,7 @@ import { useTodoStore } from "~/stores/todo-store"
 import TodoListItem from "./TodoListItem"
 
 const TodoItems = () => {
-  const { todos, isPending } = useTodoStore()
+  const { isPending, todos } = useTodoStore()
   return (
     <Stack spacing={2}>
       {todos.map(todo => (

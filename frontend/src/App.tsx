@@ -14,7 +14,7 @@ import { useAppTheme } from "./theme"
  */
 function App() {
   const theme = useAppTheme()
-  const { selectedLocale, messages } = useLocaleLoader()
+  const { messages, selectedLocale } = useLocaleLoader()
 
   return (
     <IntlProvider messages={messages} locale={selectedLocale} defaultLocale={Locales.ENGLISH}>

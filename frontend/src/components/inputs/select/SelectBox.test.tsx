@@ -5,7 +5,7 @@ import SelectBox, { SelectBoxOption } from "./SelectBox"
 
 const options: SelectBoxOption<string>[] = [
   { label: "Option 1", value: "opt1" },
-  { label: "Option 2", value: "opt2", hint: "Hint for option 2" },
+  { hint: "Hint for option 2", label: "Option 2", value: "opt2" },
   { label: "Option 3", value: "opt3" },
 ]
 

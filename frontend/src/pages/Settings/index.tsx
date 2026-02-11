@@ -11,16 +11,16 @@ const SettingsPage = () => {
 
   const tabs: TabType[] = [
     {
-      label: formatMessage({ id: "pages.settings.tabs.general.title", defaultMessage: "General" }),
       content: <GeneralTab />,
+      label: formatMessage({ defaultMessage: "General", id: "pages.settings.tabs.general.title" }),
     },
     {
-      label: formatMessage({ id: "pages.settings.tabs.advanced.title", defaultMessage: "Advanced" }),
       content: <AdvancedTab />,
+      label: formatMessage({ defaultMessage: "Advanced", id: "pages.settings.tabs.advanced.title" }),
     },
   ]
   return (
-    <PageLayout documentTitle={formatMessage({ id: "pages.settings.title", defaultMessage: "Settings" })}>
+    <PageLayout documentTitle={formatMessage({ defaultMessage: "Settings", id: "pages.settings.title" })}>
       <Tabs tabs={tabs} />
     </PageLayout>
   )

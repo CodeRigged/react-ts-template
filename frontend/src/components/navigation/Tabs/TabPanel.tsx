@@ -17,7 +17,7 @@ interface TabPanelProps extends ChildComponent {
  * @param {...any} props.other - Additional props to be spread on the div element.
  * @return {JSX.Element | null} The rendered tab panel or null if the value does not match the index.
  */
-const TabPanel = ({ index, value, children, ...other }: TabPanelProps) => {
+const TabPanel = ({ children, index, value, ...other }: TabPanelProps) => {
   return value === index ? (
     <div
       role="tabpanel"

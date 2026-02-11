@@ -16,7 +16,7 @@ const SettingsSection = ({ components }: SettingsSectionProps) => {
   return (
     <Grid className="section" container alignItems="center" spacing={2}>
       {components.map((component, i) => (
-        <Grid size={{ xs: 12, md: 6 }} key={`component-${i}`}>
+        <Grid size={{ md: 6, xs: 12 }} key={`component-${i}`}>
           {component}
         </Grid>
       ))}

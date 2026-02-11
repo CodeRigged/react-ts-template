@@ -16,7 +16,7 @@ interface TodoListItemProps {
 const TodoListItem = ({ todo }: TodoListItemProps) => {
   const [editMode, setEditMode] = useState(false)
   const [editText, setEditText] = useState(todo.text)
-  const { updateTodo, deleteTodo, isPending } = useTodoStore()
+  const { deleteTodo, isPending, updateTodo } = useTodoStore()
   const { setError } = useErrorStore()
 
   const handleSaveEdit = async () => {

@@ -7,7 +7,7 @@ import { useErrorStore } from "~/stores/state-handlers"
 
 import { autoHideDuration } from "./ErrorAlert.constants"
 
-const error = { name: "TestError", message: "Something went wrong!" }
+const error = { message: "Something went wrong!", name: "TestError" }
 
 /**
  * Helper to setup the AppAlert component with optional error state.

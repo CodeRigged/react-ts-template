@@ -15,8 +15,8 @@ export const useErrorStore = create<ErrorStore>(set => ({
 
 export interface PendingState {
   isPending: boolean
-  setIsPending: (pending: boolean, text?: Nullable<string>) => void
   text: Nullable<string>
+  setIsPending: (pending: boolean, text?: Nullable<string>) => void
 }
 
 export const createPendingSlice: StateCreator<PendingState> = set => ({

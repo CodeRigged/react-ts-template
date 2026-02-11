@@ -20,8 +20,26 @@ export default defineConfig(
       "perfectionist/sort-imports": [
         "error",
         {
-          type: "natural",
           order: "asc",
+          type: "natural",
+        },
+      ],
+      "perfectionist/sort-interfaces": [
+        "error",
+        {
+          groups: ["unknown", "property", "method"],
+          order: "asc",
+          sortBy: "name",
+          type: "alphabetical",
+        },
+      ],
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          groups: ["unknown", "property", "method"],
+          order: "asc",
+          sortBy: "name",
+          type: "alphabetical",
         },
       ],
     },
