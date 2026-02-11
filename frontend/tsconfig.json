@@ -1,27 +1,11 @@
 {
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "types": ["vitest/globals", "node"],
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Path aliases */
+    "types": ["vitest/globals", "node"],
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "baseUrl": "./src",
     "paths": {
       "~/components/*": ["./components/*"],
@@ -33,6 +17,6 @@
       "~/utils/*": ["./utils/*"]
     }
   },
-  "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"]
 }

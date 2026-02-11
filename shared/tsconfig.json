@@ -1,4 +1,5 @@
 {
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "build",
     "rootDir": "src",
@@ -6,12 +7,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "target": "ES2020",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "moduleResolution": "nodenext"
   },
   "include": ["src"],
   "exclude": ["node_modules", "build"]

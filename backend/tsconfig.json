@@ -1,26 +1,10 @@
 {
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
     "lib": ["ES2020"],
-    "module": "ESNext",
-    "skipLibCheck": true,
     "types": ["vitest/globals", "node"],
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Path aliases */
+    "allowImportingTsExtensions": true,
     "baseUrl": "./src",
     "paths": {
       "~/*": ["./*"],
@@ -29,13 +13,7 @@
       "~/routes/*": ["./api/routes/*"],
       "~/services/*": ["./api/services/*"],
       "@logger": ["./app.logger.ts"]
-    },
-    "allowSyntheticDefaultImports": true
+    }
   },
-  "ts-node": {
-    "transpileOnly": true,
-    "require": ["tsconfig-paths/register"]
-  },
-  "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"],
-  "references": []
+  "include": ["src", "setup-vitest.ts", "__tests__", "__mocks__"]
 }

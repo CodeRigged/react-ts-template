@@ -1,3 +1,3 @@
-export { Todo } from "./common/index.js";
-export { Locales } from "./enums/index.js";
-export { Nullable } from "./utils/index.js";
+export type { Todo } from "./common/index.js";
+export type { Locales } from "./enums/index.js";
+export type { Nullable } from "./utils/index.js";
