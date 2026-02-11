@@ -1,7 +1,7 @@
-import type { ObjectId } from "mongodb";
+import type { ObjectId } from "mongodb"
 
 export interface Todo {
-  _id: ObjectId;
-  completed: boolean;
-  text: string;
+  _id: ObjectId
+  completed: boolean
+  text: string
 }

@@ -1,7 +1,7 @@
-import logger from "@logger";
-import { Request, Response } from "express";
+import logger from "@logger"
+import { Request, Response } from "express"
 
-import * as todoService from "~/services/todoService";
+import * as todoService from "~/services/todoService"
 
 /**
  * Controller to handle fetching all todos and sending them in the response.
@@ -10,13 +10,13 @@ import * as todoService from "~/services/todoService";
  */
 export const getTodos = async (_req: Request, res: Response) => {
   try {
-    const todos = await todoService.getAllTodos();
-    res.json({ todos });
+    const todos = await todoService.getAllTodos()
+    res.json({ todos })
   } catch (err) {
-    logger.error({ err }, "Error fetching todos");
-    res.status(500).json({ error: "Failed to fetch todos" });
+    logger.error({ err }, "Error fetching todos")
+    res.status(500).json({ error: "Failed to fetch todos" })
   }
-};
+}
 
 /**
  * Controller to handle creating a new todo from request body.
@@ -25,15 +25,15 @@ export const getTodos = async (_req: Request, res: Response) => {
  */
 export const createTodo = async (req: Request, res: Response) => {
   try {
-    const { text } = req.body;
-    if (!text) return res.status(400).json({ error: "Text is required" });
-    const todo = await todoService.createTodo(text);
-    res.status(201).json({ todo });
+    const { text } = req.body
+    if (!text) return res.status(400).json({ error: "Text is required" })
+    const todo = await todoService.createTodo(text)
+    res.status(201).json({ todo })
   } catch (err) {
-    logger.error({ err }, "Error creating todo");
-    res.status(500).json({ error: "Failed to create todo" });
+    logger.error({ err }, "Error creating todo")
+    res.status(500).json({ error: "Failed to create todo" })
   }
-};
+}
 
 /**
  * Controller to update a todo's text by ID.
@@ -42,19 +42,19 @@ export const createTodo = async (req: Request, res: Response) => {
  */
 export const updateTodo = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
-    const { text } = req.body;
-    if (!text) return res.status(400).json({ error: "Text is required" });
-    const updatedTodo = await todoService.updateTodo(id, text);
+    const { id } = req.params
+    const { text } = req.body
+    if (!text) return res.status(400).json({ error: "Text is required" })
+    const updatedTodo = await todoService.updateTodo(id, text)
     if (!updatedTodo) {
-      return res.status(404).json({ error: "Todo not found" });
+      return res.status(404).json({ error: "Todo not found" })
     }
-    res.json({ message: "Todo updated", todo: updatedTodo });
+    res.json({ message: "Todo updated", todo: updatedTodo })
   } catch (err) {
-    logger.error({ err }, "Error updating todo");
-    res.status(500).json({ error: "Failed to update todo" });
+    logger.error({ err }, "Error updating todo")
+    res.status(500).json({ error: "Failed to update todo" })
   }
-};
+}
 
 /**
  * Controller to delete a todo by its ID.
@@ -63,14 +63,14 @@ export const updateTodo = async (req: Request, res: Response) => {
  */
 export const deleteTodo = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
-    const deletedTodo = await todoService.deleteTodo(id);
+    const { id } = req.params
+    const deletedTodo = await todoService.deleteTodo(id)
     if (!deletedTodo) {
-      return res.status(404).json({ error: "Todo not found" });
+      return res.status(404).json({ error: "Todo not found" })
     }
-    res.json({ message: "Todo deleted", todo: deletedTodo });
+    res.json({ message: "Todo deleted", todo: deletedTodo })
   } catch (err) {
-    logger.error({ err }, "Error deleting todo");
-    res.status(500).json({ error: "Failed to delete todo" });
+    logger.error({ err }, "Error deleting todo")
+    res.status(500).json({ error: "Failed to delete todo" })
   }
-};
+}

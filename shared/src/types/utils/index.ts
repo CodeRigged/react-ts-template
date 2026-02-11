@@ -4,4 +4,4 @@
  *
  * @template T - The type to make nullable.
  */
-export type Nullable<T> = T | null;
+export type Nullable<T> = T | null

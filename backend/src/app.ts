@@ -1,22 +1,22 @@
-import express from "express";
-import mongoose from "mongoose";
+import express from "express"
+import mongoose from "mongoose"
 
-import todoRoutes from "~/routes/todoRoutes";
+import todoRoutes from "~/routes/todoRoutes"
 
-import { applyMiddleware } from "./app.middleware";
+import { applyMiddleware } from "./app.middleware"
 
-const app = express();
-applyMiddleware(app);
+const app = express()
+applyMiddleware(app)
 
 // Health check endpoint
 app.get("/health", async (_req, res) => {
   if (!mongoose.connection.readyState) {
-    return res.status(503).json({ status: "db not ready" });
+    return res.status(503).json({ status: "db not ready" })
   }
-  res.json({ status: "ok" });
-});
+  res.json({ status: "ok" })
+})
 
 // Todos API
-app.use("/todos", todoRoutes);
+app.use("/todos", todoRoutes)
 
-export default app;
+export default app
