@@ -1,5 +1,6 @@
 import { Button, ButtonProps } from "@mui/material"
 import { Link } from "react-router-dom"
+
 import { LinkComponent } from "~/types/common"
 
 interface LinkButtonProps extends LinkComponent {

@@ -1,5 +1,6 @@
 import { Tab, Tabs } from "@mui/material"
 import { Dispatch, SetStateAction, SyntheticEvent } from "react"
+
 import { Selected, TabType } from "./"
 
 interface PanelHeaderProps {

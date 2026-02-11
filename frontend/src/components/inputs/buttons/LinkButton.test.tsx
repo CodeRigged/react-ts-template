@@ -1,6 +1,7 @@
 import { ButtonProps } from "@mui/material"
 import { act, fireEvent, render, screen } from "@testing-library/react"
 import { MemoryRouter } from "react-router-dom"
+
 import LinkButton from "~/components/inputs/buttons/LinkButton"
 
 const label = "Go to page"

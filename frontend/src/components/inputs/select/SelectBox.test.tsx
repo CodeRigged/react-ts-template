@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import { act } from "react"
+
 import SelectBox, { SelectBoxOption } from "./SelectBox"
 
 const options: SelectBoxOption<string>[] = [

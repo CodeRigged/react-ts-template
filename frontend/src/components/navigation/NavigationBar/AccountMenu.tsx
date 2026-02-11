@@ -3,6 +3,7 @@ import LogoutIcon from "@mui/icons-material/Logout"
 import SettingsIcon from "@mui/icons-material/Settings"
 import { Divider, IconButton } from "@mui/material"
 import { FormattedMessage } from "react-intl"
+
 import AppMenu from "../Menu"
 import { MenuListItem } from "../Menu/MenuItems"
 

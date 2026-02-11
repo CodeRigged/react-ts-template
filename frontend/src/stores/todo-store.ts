@@ -1,6 +1,8 @@
 import { Todo } from "shared/types"
 import { create } from "zustand"
+
 import { apiFetch } from "~/utils/api"
+
 import { createPendingSlice, PendingState } from "./state-handlers"
 
 interface TodoStore extends PendingState {

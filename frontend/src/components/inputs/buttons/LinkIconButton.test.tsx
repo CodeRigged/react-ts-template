@@ -3,6 +3,7 @@ import { IconButtonProps } from "@mui/material"
 import { fireEvent, render, screen } from "@testing-library/react"
 import { act } from "react"
 import { MemoryRouter } from "react-router-dom"
+
 import LinkIconButton from "~/components/inputs/buttons/LinkIconButton"
 
 const to = "/icon-link"

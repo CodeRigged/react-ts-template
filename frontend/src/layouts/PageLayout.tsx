@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material"
+
 import { ChildComponent } from "~/types/common"
 import useDocumentTitle from "~/utils/hooks/useDocumentTitle"
 

@@ -1,6 +1,8 @@
 import { useIntl } from "react-intl"
+
 import Tabs, { TabType } from "~/components/navigation/Tabs"
 import PageLayout from "~/layouts/PageLayout"
+
 import AdvancedTab from "./AdvancedTab"
 import GeneralTab from "./GeneralTab"
 

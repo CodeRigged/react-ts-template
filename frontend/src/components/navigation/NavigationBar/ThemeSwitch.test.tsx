@@ -1,6 +1,8 @@
 import { PaletteOptions, ThemeProvider, createTheme } from "@mui/material/styles"
 import { fireEvent, render, screen } from "@testing-library/react"
+
 import * as stores from "~/stores/index"
+
 import ThemeSwitch from "./ThemeSwitch"
 
 /**

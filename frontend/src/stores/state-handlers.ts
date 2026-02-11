@@ -8,7 +8,9 @@ interface ErrorStore {
 
 export const useErrorStore = create<ErrorStore>(set => ({
   error: null,
-  setError: (error = null) => set({ error }),
+  setError: (error = null) => {
+    set({ error })
+  },
 }))
 
 export interface PendingState {
@@ -20,5 +22,7 @@ export interface PendingState {
 export const createPendingSlice: StateCreator<PendingState> = set => ({
   isPending: false,
   text: null,
-  setIsPending: (isPending, text = null) => set({ isPending, text }),
+  setIsPending: (isPending, text = null) => {
+    set({ isPending, text })
+  },
 })

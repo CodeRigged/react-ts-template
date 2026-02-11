@@ -1,4 +1,5 @@
 import { ChildComponent } from "~/types/common"
+
 import { Selected } from "./"
 
 interface TabPanelProps extends ChildComponent {

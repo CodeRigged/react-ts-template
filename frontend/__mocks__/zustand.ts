@@ -1,6 +1,7 @@
+import type * as ZustandExportedTypes from "zustand"
+
 // __mocks__/zustand.ts
 import { act } from "@testing-library/react"
-import type * as ZustandExportedTypes from "zustand"
 export * from "zustand"
 
 const { create: actualCreate, createStore: actualCreateStore } =

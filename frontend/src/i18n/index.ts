@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Locales } from "shared/types"
+
 import { useAppStore, useLocaleStore } from "~/stores/index"
+
 import { flattenObject } from "../utils"
 import defaultLocale from "./json/en-US.json"
 

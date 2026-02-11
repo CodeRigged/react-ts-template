@@ -1,8 +1,11 @@
 import { cleanup, fireEvent, render, screen, waitForElementToBeRemoved } from "@testing-library/react"
 import { act } from "react"
 import { Nullable } from "shared/types"
-import AppAlert, { autoHideDuration } from "~/components/feedback/alerts/ErrorAlert"
+
+import AppAlert from "~/components/feedback/alerts/ErrorAlert"
 import { useErrorStore } from "~/stores/state-handlers"
+
+import { autoHideDuration } from "./ErrorAlert.constants"
 
 const error = { name: "TestError", message: "Something went wrong!" }
 

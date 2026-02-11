@@ -1,4 +1,5 @@
 import "vite/client"
+
 import defaultLocale from "../i18n/json/en-US.json"
 import { DotPaths } from "./utils"
 

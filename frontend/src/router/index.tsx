@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
+
 import AppLayout from "~/layouts/AppLayout"
 import LandingPage from "~/pages/Landing"
 import LogoutPage from "~/pages/LogoutPage"
