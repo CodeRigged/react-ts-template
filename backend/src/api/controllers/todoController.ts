@@ -13,7 +13,7 @@ export const getTodos = async (_req: Request, res: Response) => {
     const todos = await todoService.getAllTodos();
     res.json({ todos });
   } catch (err) {
-    logger.error("Error fetching todos");
+    logger.error({ err }, "Error fetching todos");
     res.status(500).json({ error: "Failed to fetch todos" });
   }
 };
@@ -30,7 +30,7 @@ export const createTodo = async (req: Request, res: Response) => {
     const todo = await todoService.createTodo(text);
     res.status(201).json({ todo });
   } catch (err) {
-    logger.error("Error creating todo");
+    logger.error({ err }, "Error creating todo");
     res.status(500).json({ error: "Failed to create todo" });
   }
 };
@@ -51,7 +51,7 @@ export const updateTodo = async (req: Request, res: Response) => {
     }
     res.json({ message: "Todo updated", todo: updatedTodo });
   } catch (err) {
-    logger.error("Error updating todo");
+    logger.error({ err }, "Error updating todo");
     res.status(500).json({ error: "Failed to update todo" });
   }
 };
@@ -70,7 +70,7 @@ export const deleteTodo = async (req: Request, res: Response) => {
     }
     res.json({ message: "Todo deleted", todo: deletedTodo });
   } catch (err) {
-    logger.error("Error deleting todo");
+    logger.error({ err }, "Error deleting todo");
     res.status(500).json({ error: "Failed to delete todo" });
   }
 };

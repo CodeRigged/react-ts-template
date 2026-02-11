@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Locales } from "shared/types"
 
 import { useAppStore, useLocaleStore } from "~/stores/index"
+import logger from "~/utils/logger"
 
 import { flattenObject } from "../utils"
 import defaultLocale from "./json/en-US.json"
@@ -16,7 +17,7 @@ const importLocaleData = async (locale: Locales) => {
   try {
     return await import(`./json/${locale}.json`)
   } catch {
-    console.warn(`Locale "${locale}" not found. Falling back to default.`)
+    logger.warn(`Locale "${locale}" not found. Falling back to default.`)
     return { default: defaultLocale } // Fallback to defaultLocale
   }
 }
