@@ -1,6 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
+
 import todoRoutes from "~/routes/todoRoutes";
+
 import { applyMiddleware } from "./app.middleware";
 
 const app = express();

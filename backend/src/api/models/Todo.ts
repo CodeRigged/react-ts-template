@@ -4,8 +4,8 @@ import { Todo as TodoType } from "shared/types";
 export type ITodo = TodoType & Document;
 
 const todoSchema = new Schema<ITodo>({
-  text: { type: String, required: true },
-  completed: { type: Boolean, default: false },
+  completed: { default: false, type: Boolean },
+  text: { required: true, type: String },
 });
 
 export const Todo = model<ITodo>("Todo", todoSchema);

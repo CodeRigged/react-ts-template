@@ -8,9 +8,9 @@ const pinoOptions =
   process.env.NODE_ENV === "test"
     ? {
         serializers: {
+          err: () => undefined,
           req: () => undefined,
           res: () => undefined,
-          err: () => undefined,
         },
       }
     : {};

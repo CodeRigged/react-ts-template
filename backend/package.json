@@ -42,7 +42,9 @@
     "clean": "rm -rf build tsconfig.tsbuildinfo",
     "dev": "npx vite-node src/server.ts",
     "start": "node build/server.js",
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "lint:autofix": "eslint . --ext ts --fix --report-unused-disable-directives --max-warnings 0"
   },
   "type": "module",
   "version": "1.0.0"
