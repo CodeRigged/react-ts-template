@@ -3,13 +3,19 @@
   "description": "A fullstack example of a pnpm workspace.",
   "devDependencies": {
     "@eslint/js": "9.39.2",
+    "@types/node": "20.19",
     "@typescript-eslint/eslint-plugin": "8.54.0",
+    "@vitest/ui": "4.0.18",
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-perfectionist": "5.5.0",
     "rimraf": "^6.1.2",
-    "wait-on": "^9.0.3",
-    "typescript-eslint": "8.55.0"
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.55.0",
+    "vite": "7.3.1",
+    "vite-tsconfig-paths": "6.1.0",
+    "vitest": "4.0.18",
+    "wait-on": "^9.0.3"
   },
   "engines": {
     "node": ">=20.19.0"
@@ -31,10 +37,10 @@
     "build": "pnpm --stream -r run build",
     "clean": "rimraf build dist node_modules && pnpm -r run clean",
     "dev": "pnpm --parallel --stream -r run dev",
-    "predev": "node ./createEnvFiles.mjs && pnpm -F shared build",
-    "test": "pnpm --parallel --stream -r run test",
     "lint": "pnpm --parallel --stream -r run lint",
-    "lint:autofix": "pnpm --parallel --stream -r run lint:autofix"
+    "lint:autofix": "pnpm --parallel --stream -r run lint:autofix",
+    "predev": "node ./createEnvFiles.mjs && pnpm -F shared build",
+    "test": "pnpm --parallel --stream -r run test"
   },
   "version": "1.0.0"
 }
