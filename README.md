@@ -37,7 +37,23 @@ npm install -g pnpm
 
    This command starts both the frontend and backend in development mode. Output from both will be shown in your terminal.
 
-4. **Build all packages:**
+4. **Test all packages:**
+
+   ```bash
+   pnpm test
+   ```
+
+   This command runs tests for all packages in the workspace.
+
+5. **Lint all packages:**
+
+   ```bash
+   pnpm lint
+   ```
+
+   This command checks code quality and formatting for all packages in the workspace. You can use `pnpm lint:autofix` to automatically fix issues.
+
+6. **Build all packages:**
 
    ```bash
    pnpm build
@@ -45,7 +61,8 @@ npm install -g pnpm
 
    This compiles the frontend and backend for production.
 
-5. **Clean build artifacts:**
+7. **Clean build artifacts:**
+
    ```bash
    pnpm clean
    ```

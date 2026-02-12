@@ -1,7 +1,6 @@
 {
   "author": "https://github.com/CodeRigged",
   "dependencies": {
-    "@apollo/client": "4.1.4",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@mui/icons-material": "7.3.7",
@@ -36,7 +35,10 @@
     "react",
     "typescript",
     "template",
-    "frontend"
+    "frontend",
+    "testing",
+    "mui",
+    "zustand"
   ],
   "license": "MIT",
   "name": "react-ts-template",

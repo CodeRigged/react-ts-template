@@ -21,7 +21,8 @@
     "typescript",
     "react",
     "express",
-    "mongoose"
+    "mongoose",
+    "testing"
   ],
   "license": "MIT",
   "main": "index.js",

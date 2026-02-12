@@ -32,7 +32,9 @@
     "typescript",
     "template",
     "backend",
-    "mongoose"
+    "mongoose",
+    "testing",
+    "logging"
   ],
   "license": "MIT",
   "main": "build/app.js",
