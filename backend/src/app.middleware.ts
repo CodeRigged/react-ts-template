@@ -2,16 +2,12 @@ import logger from "@logger"
 import bodyParser from "body-parser"
 import cors from "cors"
 import { Express } from "express"
-import pino from "pino-http"
+import pino, { Options } from "pino-http"
 
-const pinoOptions =
+const pinoOptions: Options =
   process.env.NODE_ENV === "test"
     ? {
-        serializers: {
-          err: () => undefined,
-          req: () => undefined,
-          res: () => undefined,
-        },
+        level: "silent",
       }
     : {}
 
